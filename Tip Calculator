@@ -1,0 +1,6 @@
+subtotal = float(input("How much is the bill? $"))
+tip_percentage = int(input("How much would you like to tip? "))
+tip_new = float(tip_percentage / 100)
+num_split = int(input("How many people are splitting the bill? "))
+total = round((subtotal + (subtotal * tip_new)) / num_split, 2)
+print (f"With a subtotal of ${subtotal} and a {tip_percentage}% tip split {num_split} ways, each person will owe ${total}.")
