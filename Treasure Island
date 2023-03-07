@@ -1,0 +1,61 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+print("The sun beats down on your from overhead as you check your treasure map. It's here somewhere, but where? You look up. There's a path winding through the trees to your left, and the beach following the shoreline to your right.")
+def Loop():
+  direction = input("Which way would you like to go, left or right?\n").lower()
+  if direction == "left":
+    print("You decide to try the path. The jungle looms above you and you try to block out the noises coming from the darkness within. After almost an entire day of trekking, you reach a river blocking your path forward. Do you want to swim across or make a raft?")
+    river_choice = input("Enter S to swim or R to make a raft.\n").lower()
+    if river_choice == "s":
+      print("Without a second thought, you jump into the river, but are horrified to find you misjudged the strength of the currents. The last thing you see as you slip under the water is the large boulder you're being hurled towards.")
+      print("Game over.")
+    elif river_choice == "r":
+      print ("It takes some time, and you are keenly aware of the need to getto safety before the sun sets, but you manage to fashion a raft and you slowly but surely paddle your way to the other side of the river.")
+      print ("With the light of day gone, you decide your only course of action now is to rest and continue your hunt in the morning. For now, you have to figure out how to rest safely. You look around and find a cave that might provide some immediate cover from predators, but it may also come with its own problems. The other option seems to be setting up a small shelter under a nearby tree.")
+      sleep_choice = input("Enter C to sleep in the cave or T to sleep under the tree.\n").lower()
+      if sleep_choice == "c":
+        print ("You walk into the cave. It's cold and damp, but it should get the job done. You drift off to sleep quickly, and when you wake up, you are amazed to see that farther back in the cave are three doors, each of a different color. You pull out the treasure map and stifle a laugh. One of these doors has the treasure behind it! But which one?")
+        door_choice = input("Which door do you choose? Enter R for red, Y for yellow, or B for blue.\n").lower()
+        if door_choice == "r":
+            print ("You take a deep breath and open the red door. Behind it, you feast your eyes on a large chest, encrusted with jewels and with piles of gold and other valuables surrounding it.")
+            print ("Congratulations! You found the treasure and won the game!")
+        elif door_choice == "y":
+            print ("The door creaks open loudly, and inside you hear the hisses of two huge basilisks, just disturbed from their slumber. You turn to run, but it's too late. The basilisks are eating well tonight.")
+            print ("Game over.")
+        else:
+            print ("The blue door swings open to reveal a long corridor. This wasn't detailed on the map, but you slowly venture forth into the darkness. Just when you think you should turn back and try another door, your foot sinks lower than expected as the ground gives way. You stumble forward, trying fruitlessly to find purchase. The ground sinks beneath you and you enter into freefall. As you fall, you think you see the glint of gold below you, but then it's only blackness.")
+            print ("Game over.")
+      elif sleep_choice == "t":
+        print ("You try to create a blanket out of some nearby grasses and large leaves, but the night is unforgiving and cold. You wake up with the eerie feeling that soemthing is watching you. You don't have time to investigate before the large jaguar pounces.")
+        print ("Game over.")
+  elif direction == "right":
+    print("You decide to travel along the beach, hoping to steer clear of the dangers of the jungle. But just when you think all is safe...")
+    print("A giant crab attacks you! You try your best to fight it, but it overpowers you quickly.")
+    print("Game over.")
+  else:
+    print("Input not recognized. Please try again.")
+    Loop()
+Loop()
+
