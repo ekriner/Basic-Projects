@@ -1,0 +1,82 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+print ("Welcome to Rock, Paper, Scissors. Make your selection now:")
+print ("R for Rock")
+print ("P for Paper")
+print ("S for Scissors")
+wins = 0
+losses = 0
+while (wins < 1000):
+  userChoice = input("Which would you like to choose?\n").lower()
+  selections = ["Rock", "Paper", "Scissors"]
+  compChoice = random.choice(selections)
+  if userChoice == "r":
+    print (rock)
+    print ("You chose ROCK!")
+  elif userChoice == "p":
+    print (paper)
+    print ("You chose PAPER!")
+  elif userChoice == "s":
+    print (scissors)
+    print ("You chose SCISSORS!")
+  else:
+    print ("Your selection is invalid. You LOSE!")
+    losses += 1
+    print (f"Wins: {wins}   Losses: {losses}")
+    continue
+  
+  if compChoice == "Rock":
+    print (rock)
+    print ("Computer chose ROCK!")
+  elif compChoice == "Paper":
+    print (paper)
+    print ("Computer chose PAPER!")
+  else:
+    print (scissors)
+    print ("Computer chose SCISSORS!")
+  
+  if userChoice == "r" and compChoice == "Rock":
+    print ("It's a DRAW!")
+  elif userChoice == "r" and compChoice == "Paper":
+    print ("You LOSE!") 
+    losses += 1
+  elif userChoice == "p" and compChoice == "Paper":
+    print ("It's a DRAW!")
+  elif userChoice == "p" and compChoice == "Scissors":
+    print ("You LOSE!")
+    losses += 1
+  elif userChoice == "s" and compChoice == "Scissors":
+    print ("It's a DRAW!")
+  elif userChoice == "s" and compChoice == "Rock":
+    print ("You LOSE!")
+    losses += 1
+  else:
+    print ("You WIN!")
+    wins += 1
+  print (f"Wins: {wins}   Losses: {losses}")
