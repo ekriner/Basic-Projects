@@ -8,3 +8,5 @@ Day 2: Tip Calculator - Uses equations, f-strings, and formatting to gather data
 Day 3: Treasure Island - Uses if/then statements and conditionals for a simple text-based adventure game. Also utilizes basic string formatting and the loop function.
 
 Day 4: Rock, Paper, Scissors - Uses if/then statements and basic list creation/indexing as well as randomization to create a simple game with the computer. It will loop and keep track of wins and losses as it continues.
+
+Day 5: Password Generator - Uses for loops and shuffle/join to generate a random password with some input from users on parameters.
